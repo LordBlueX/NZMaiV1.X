@@ -1,0 +1,11 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+NZMaiEmptyHand,entityclasses,Entity,,,NZMaiHC,,,,,,,,,,,,,
+NZMaiAK47,entityclasses,Entity,,,NZMaiAK,,,,,,,,,,,,,
+NZMaiAxe,entityclasses,Entity,,,NZMaiAxes,,,,,,,,,,,,,
+NZMaiBat,entityclasses,Entity,,,NZMaiBats,,,,,,,,,,,,,
+NZMaiKnife,entityclasses,Entity,,,NZMaiKnifes,,,,,,,,,,,,,
+NZMaiPipeMG,entityclasses,Entity,,,NZMaiPipeMGs,,,,,,,,,,,,,
+NZMaiXBow,entityclasses,Entity,,,NZMaiXBows,,,,,,,,,,,,,
+
+NZMAIS,items,Item,,,NZMai's NPC,,,,

@@ -1,0 +1,52 @@
+<configs>
+
+<append xpath="/blocks">
+
+<!-- NPC NZ Mai Blocks -->
+
+<block name="NZMaiHCSpawnCube">
+	<property name="Extends" value="SpawnCube"/>
+	<property name="Class" value="SpawnCube2SDX, SCore" />
+	<property name="Config" value="ec=NZMaiEmptyHand;task=stay;pc=0;leader=yes" />
+</block>
+
+<block name="NZMaiAKSpawnCube">
+	<property name="Extends" value="SpawnCube"/>
+	<property name="Class" value="SpawnCube2SDX, SCore" />
+	<property name="Config" value="ec=NZMaiAK47;task=stay;pc=0;leader=yes" />
+</block>
+
+<block name="NZMaiAxesSpawnCube">
+	<property name="Extends" value="SpawnCube"/>
+	<property name="Class" value="SpawnCube2SDX, SCore" />
+	<property name="Config" value="ec=NZMaiAxe;task=stay;pc=0;leader=yes" />
+</block>
+
+<block name="NZMaiBatsSpawnCube">
+	<property name="Extends" value="SpawnCube"/>
+	<property name="Class" value="SpawnCube2SDX, SCore" />
+	<property name="Config" value="ec=NZMaiBat;task=stay;pc=0;leader=yes" />
+</block>
+
+<block name="NZMaiKnifesSpawnCube">
+	<property name="Extends" value="SpawnCube"/>
+	<property name="Class" value="SpawnCube2SDX, SCore" />
+	<property name="Config" value="ec=NZMaiKnife;task=stay;pc=0;leader=yes" />
+</block>
+
+<block name="NZMaiPipeMGsSpawnCube">
+	<property name="Extends" value="SpawnCube"/>
+	<property name="Class" value="SpawnCube2SDX, SCore" />
+	<property name="Config" value="ec=NZMaiPipeMG;task=stay;pc=0;leader=yes" />
+</block>
+
+<block name="NZMaiXBowsSpawnCube">
+	<property name="Extends" value="SpawnCube"/>
+	<property name="Class" value="SpawnCube2SDX, SCore" />
+	<property name="Config" value="ec=NZMaiXBow;task=stay;pc=0;leader=yes" />
+</block>
+
+</append>
+
+
+</configs>

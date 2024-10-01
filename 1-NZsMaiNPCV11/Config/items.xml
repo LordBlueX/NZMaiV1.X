@@ -1,0 +1,48 @@
+<configs>
+	<append xpath="/items">
+	
+	
+		<item name="NZMAIS">
+			<property name="HoldType" value="7"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/XythNPCs.unity3d?placementfemale"/> <!-- Next Adventure Maid Iroha Model -->
+			<property name="DropMeshfile"  value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="6000"/>
+			<property name="CustomIcon" value="MaiNZIcons3"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Class" value="DeployNPCSDX, SCore"/>
+			</property>
+		</item>
+	
+		<item name="NZMaiPickUpNPC">
+			<property name="Extends" value="NZMAIS" />
+			<property name="EntityClass" value="NZMaiEmptyHand,NZMaiAK47,NZMaiAxe,NZMaiBat,NZMaiKnife,NZMaiPipeMG,NZMaiXBow" />
+          <property name="Meshfile" value="#@modfolder:Resources/1.0BetaNZMaiNPC.unity3d?7DayzMaiNZ"/>
+		  <property name="CustomIcon" value="MaiNZIcons3"/>
+        </item>
+	
+		<!-- Turned Off
+		<item name="LBXMI2SP">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="missingIcon"/><property name="CustomIconTint" value="90ff90"/>
+			<property name="HoldType" value="45"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#@modfolder:Resources/KOFMILienMIV1DoneV2.unity3d?LienNPCDoneV4"/> 
+			<property name="DropMeshfile"  value="#@modfolder:Resources/KOFMILienMIV1DoneV2.unity3d?LienNPCDoneV4"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="1"/> 
+			<property name="EconomicValue" value="1"/>
+			<property name="EconomicBundleSize" value="1000"/>
+			<property name="Group" value="Resources"/>
+		</item> -->
+		
+		
+		
+		
+	</append>
+</configs>

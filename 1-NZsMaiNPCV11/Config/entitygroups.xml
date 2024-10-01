@@ -1,0 +1,126 @@
+<configs>
+
+	<!--  New Way Of Spawning , for the spawning.xml Modified thanks to mr.devolver , and bdubyah for the tips	-->
+	
+	<append xpath="/entitygroups">
+
+		<!-- DAY -->
+
+		<entitygroup name="NPCNZMaiGroupDay">
+			NZMaiAK47, 1
+			NZMaiAxe, 1
+			NZMaiBat, 1
+			NZMaiKnife, 1
+			NZMaiPipeMG, 1
+			NZMaiXBow, 1
+			none, 92
+		</entitygroup>
+
+		<!-- NIGHT --> 
+
+		<entitygroup name="NPCNZMaiGroupNight">
+			NZMaiAK47, .70
+			NZMaiAxe, .70
+			NZMaiBat, .70
+			NZMaiKnife, .70
+			NZMaiPipeMG, .70
+			NZMaiXBow, .70
+			none, 90
+		</entitygroup>
+		
+	</append>
+
+
+
+
+		<!-- *** BIOME_ALL_ZOMBIES_GROUP Turned Off! Old Method -->
+	<!--<csv xpath="/entitygroups/entitygroup[@name='ZombiesAll']/text()" delim="\n" op="add" >		
+		NZMaiAK47
+		NZMaiAxe
+		NZMaiBat
+		NZMaiKnife
+		NZMaiPipeMG
+		NZMaiXBow
+	</csv>	-->
+
+	<!-- *** BIOME_ZOMBIES_NIGHT_GROUP -->
+	<!--<csv xpath="/entitygroups/entitygroup[@name='ZombiesNight']/text()" delim="\n" op="add" >
+		NZMaiAK47, .25 
+		NZMaiAxe, .25
+		NZMaiBat, .25
+		NZMaiKnife, .25
+		NZMaiPipeMG, .25
+		NZMaiXBow, .25
+	</csv>	-->
+	
+	<!-- *** BIOME_ZOMBIES_LUMBERJACK_GROUPS -->	
+	<!--<csv xpath="/entitygroups/entitygroup[@name='SnowZombies']/text()" delim="\n" op="add" >
+		NZMaiAK47
+		NZMaiAxe
+		NZMaiBat
+		NZMaiKnife
+		NZMaiPipeMG
+		NZMaiXBow
+	</csv>	-->
+
+	<!-- *** BIOME_ZOMBIES_WASTELAND_GROUP -->
+	<!--<csv xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add" >
+		NZMaiAK47
+		NZMaiAxe
+		NZMaiBat
+		NZMaiKnife
+		NZMaiPipeMG
+		NZMaiXBow
+	</csv>	-->
+	
+	<!-- *** BIOME_ZOMBIES_WASTELAND_NIGHT_GROUP -->
+	<!--<csv xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add" >
+		NZMaiAK47, .25
+		NZMaiAxe, .25
+		NZMaiBat, .25
+		NZMaiKnife, .25
+		NZMaiPipeMG, .25
+		NZMaiXBow, .25
+	</csv>	-->
+
+	<!-- *** BIOME_ZOMBIES_BURNT_FOREST_GROUP -->
+	<!--<csv xpath="/entitygroups/entitygroup[@name='ZombiesBurntForest']/text()" delim="\n" op="add" >
+		NZMaiAK47, .50
+		NZMaiAxe, .50
+		NZMaiBat, .50
+		NZMaiKnife, .50
+		NZMaiPipeMG, .50
+		NZMaiXBow, .50
+	</csv>	-->
+
+	
+	<!-- Off , No NPCS Can Sleep!!
+	<csv xpath="/entitygroups/entitygroup[@name='npcNZMaiCoreGroupGS01']/text()" delim="\n" op="add" >
+		NZMaiAK47
+		NZMaiAxe
+		NZMaiBat
+		NZMaiKnife
+		NZMaiPipeMG
+		NZMaiXBow
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='npcNZMaiCoreGroupGS50']/text()" delim="\n" op="add" >
+		NZMaiAK47
+		NZMaiAxe
+		NZMaiBat
+		NZMaiKnife
+		NZMaiPipeMG
+		NZMaiXBow
+	</csv>
+	
+	<csv xpath="/entitygroups/entitygroup[@name='npcNZMaiCoreGroupGS100']/text()" delim="\n" op="add" >
+		NZMaiAK47
+		NZMaiAxe
+		NZMaiBat
+		NZMaiKnife
+		NZMaiPipeMG
+		NZMaiXBow
+	</csv>	-->
+
+
+</configs>

@@ -1,0 +1,413 @@
+<configs>
+
+
+
+	<append xpath="/entity_classes">
+
+         <!-- Warriors From A Different Dimension Arrived, for use in NPC Mod -->
+		
+		<!-- NPC NZ Mai With Nothing -->
+		<entity_class name="NZMaiEmptyHand" extends="npcAdvancedEmptyHandTemplate"> 
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="EntityType" value="Player"/>
+			<property name="UserSpawnType" value="Menu"/>
+			<property name="Tags" value="entity,female,npc,walker,melee,DRMid,Knife,BatWood,Axe,PipeMG,Ak47,XBow"/> <!-- Added cp , and mostly UMA2 for testing UMA2 -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="PhysicsBody" value="NZaMaiNPCRig"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="500" />
+			<property name="Names" value="NZMaiHC" />	
+			<property name="PickUpItem" value="NZMaiPickUpNPC" />
+			<property name="Mesh" value="#@modfolder:Resources/1.0BetaNZMaiNPC.unity3d?7DayzMaiNZ"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>  <!-- Was false , will test true -->
+			<property name="HasRagdoll" value="true"/>  <!-- Was false , will test true -->
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Players"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> <!-- example for extra items on spawn  -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeNPCEmptyHand,medicalFirstAidBandage"/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<!--<property name="SoundDeath" value="HarleyDie"/> Adding Custom Voice , Not Adding One -->
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/> 
+			<property name="SleeperInstantAwake" value="true" /> <!-- Added Text -->
+			<property name="AvatarController" value="AvatarZombieController"/> <!-- Added Text -->
+			<property name="MaxViewAngle" value="360"/>		<!-- Added Text -->
+			<property name="SightRange" value="50"/>	<!-- Added Text -->
+			<property name="MaxTurnSpeed" value="359"/>		<!-- Added Text -->
+			<property name="SwimSpeed" value="1"/>	 <!-- Added Text -->
+			<property name="SwimStrokeRate" value="1,1.5"/>		 <!-- Added Text -->
+			<property name="CanClimbLadders" value="true"/>		 <!-- Added Text -->
+			<property name="JumpMaxDistance" value="2.8, 3.9"/> 	<!-- Added Text -->
+			<property name="WalkType" value="7"/>
+			
+			<effect_group name="HasBackpack">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300,500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+			
+			<!--<effect_group name="Base Effects">	
+				<passive_effect name="HealthMax" operation="base_set" value="667"/> This Should Give 500 Base HP from DiffT0 , Value Times 75% 
+			</effect_group>	-->
+		</entity_class>	
+
+
+		<!-- NPC NZ Mai With AK47 -->
+		<entity_class name="NZMaiAK47" extends="npcAdvancedAK47Template">
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="EntityType" value="Player"/>		
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,DRMid,Knife,BatWood,Axe,PipeMG,Ak47,XBow"/> <!-- Added cp , and mostly UMA2 for testing UMA2 -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="PhysicsBody" value="NZaMaiNPCRig"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="3000" />
+			<property name="Names" value="NZMaiAK" />
+			<property name="PickUpItem" value="NZMaiPickUpNPC" />
+			<property name="Mesh" value="#@modfolder:Resources/1.0BetaNZMaiNPC.unity3d?7DayzMaiNZ"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>  <!-- Was false , will test true -->
+			<property name="HasRagdoll" value="true"/>  <!-- Was false , will test true -->
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Players"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/> 
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<!--<property name="SoundDeath" value="HarleyDie"/> Adding Custom Voice , Not Adding One -->
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/> 
+			<property name="SleeperInstantAwake" value="true" /> <!-- Added Text -->
+			<property name="AvatarController" value="AvatarZombieController"/> <!-- Added Text -->
+			<property name="MaxViewAngle" value="360"/>		<!-- Added Text -->
+			<property name="SightRange" value="50"/>	<!-- Added Text -->
+			<property name="MaxTurnSpeed" value="359"/>		<!-- Added Text -->
+			<property name="SwimSpeed" value="1"/>	 <!-- Added Text -->
+			<property name="SwimStrokeRate" value="1,1.5"/>		 <!-- Added Text -->
+			<property name="CanClimbLadders" value="true"/>		 <!-- Added Text -->
+			<property name="JumpMaxDistance" value="2.8, 3.9"/> 	<!-- Added Text -->		
+			<property name="WalkType" value="7"/>
+			
+			<effect_group name="HasBackpack">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500,750"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+		</entity_class>
+
+
+
+		<!-- NPC NZ Mai With Axe -->
+		<entity_class name="NZMaiAxe" extends="npcAdvancedAxeTemplate"> 
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="EntityType" value="Player"/>	
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,DRMid,Knife,BatWood,Axe,PipeMG,Ak47,XBow"/> <!-- Added cp , and mostly UMA2 for testing UMA2 -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="PhysicsBody" value="NZaMaiNPCRig"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1250" />
+			<property name="Names" value="NZMaiAxes" />
+			<property name="PickUpItem" value="NZMaiPickUpNPC" />
+			<property name="Mesh" value="#@modfolder:Resources/1.0BetaNZMaiNPC.unity3d?7DayzMaiNZ"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>  <!-- Was false , will test true -->
+			<property name="HasRagdoll" value="true"/>  <!-- Was false , will test true -->
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Players"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<!--<property name="SoundDeath" value="HarleyDie"/> Adding Custom Voice , Not Adding One -->
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/> 
+			<property name="SleeperInstantAwake" value="true" /> <!-- Added Text -->
+			<property name="AvatarController" value="AvatarZombieController"/> <!-- Added Text -->
+			<property name="MaxViewAngle" value="360"/>		<!-- Added Text -->
+			<property name="SightRange" value="50"/>	<!-- Added Text -->
+			<property name="MaxTurnSpeed" value="359"/>		<!-- Added Text -->
+			<property name="SwimSpeed" value="1"/>	 <!-- Added Text -->
+			<property name="SwimStrokeRate" value="1,1.5"/>		 <!-- Added Text -->
+			<property name="CanClimbLadders" value="true"/>		 <!-- Added Text -->
+			<property name="JumpMaxDistance" value="2.8, 3.9"/> 	<!-- Added Text -->
+			<property name="WalkType" value="7"/>
+			
+			<effect_group name="HasBackpack">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500,750"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+		</entity_class> 
+
+		<!-- NPC NZ Mai With Bat -->
+		<entity_class name="NZMaiBat" extends="npcAdvancedBatTemplate"> 
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="EntityType" value="Player"/>	
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,DRMid,Knife,BatWood,Axe,PipeMG,Ak47,XBow"/> <!-- Added cp , and mostly UMA2 for testing UMA2 -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="PhysicsBody" value="NZaMaiNPCRig"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1250" />
+			<property name="Names" value="NZMaiBats" />
+			<property name="PickUpItem" value="NZMaiPickUpNPC" />
+			<property name="Mesh" value="#@modfolder:Resources/1.0BetaNZMaiNPC.unity3d?7DayzMaiNZ"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>  <!-- Was false , will test true -->
+			<property name="HasRagdoll" value="true"/>  <!-- Was false , will test true -->
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Players"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<!--<property name="SoundDeath" value="HarleyDie"/> Adding Custom Voice , Not Adding One -->
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/> 
+			<property name="SleeperInstantAwake" value="true" /> <!-- Added Text -->
+			<property name="AvatarController" value="AvatarZombieController"/> <!-- Added Text -->
+			<property name="MaxViewAngle" value="360"/>		<!-- Added Text -->
+			<property name="SightRange" value="50"/>	<!-- Added Text -->
+			<property name="MaxTurnSpeed" value="359"/>		<!-- Added Text -->
+			<property name="SwimSpeed" value="1"/>	 <!-- Added Text -->
+			<property name="SwimStrokeRate" value="1,1.5"/>		 <!-- Added Text -->
+			<property name="CanClimbLadders" value="true"/>		 <!-- Added Text -->
+			<property name="JumpMaxDistance" value="2.8, 3.9"/> 	<!-- Added Text -->
+			<property name="WalkType" value="7"/>
+			
+			<effect_group name="HasBackpack">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500,750"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+		</entity_class> 
+
+		<!-- NPC NZ Mai With Knife -->
+		<entity_class name="NZMaiKnife" extends="npcAdvancedKnifeTemplate"> 
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="EntityType" value="Player"/>	
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,DRMid,Knife,BatWood,Axe,PipeMG,Ak47,XBow"/> <!-- Added cp , and mostly UMA2 for testing UMA2 -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="PhysicsBody" value="NZaMaiNPCRig"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="1250" />
+			<property name="Names" value="NZMaiKnifes" />
+			<property name="PickUpItem" value="NZMaiPickUpNPC" />
+			<property name="Mesh" value="#@modfolder:Resources/1.0BetaNZMaiNPC.unity3d?7DayzMaiNZ"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>  <!-- Was false , will test true -->
+			<property name="HasRagdoll" value="true"/>  <!-- Was false , will test true -->
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Players"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<!--<property name="SoundDeath" value="HarleyDie"/> Adding Custom Voice , Not Adding One -->
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/> 
+			<property name="SleeperInstantAwake" value="true" /> <!-- Added Text -->
+			<property name="AvatarController" value="AvatarZombieController"/> <!-- Added Text -->
+			<property name="MaxViewAngle" value="360"/>		<!-- Added Text -->
+			<property name="SightRange" value="50"/>	<!-- Added Text -->
+			<property name="MaxTurnSpeed" value="359"/>		<!-- Added Text -->
+			<property name="SwimSpeed" value="1"/>	 <!-- Added Text -->
+			<property name="SwimStrokeRate" value="1,1.5"/>		 <!-- Added Text -->
+			<property name="CanClimbLadders" value="true"/>		 <!-- Added Text -->
+			<property name="JumpMaxDistance" value="2.8, 3.9"/> 	<!-- Added Text -->
+			<property name="WalkType" value="7"/>
+			
+			<effect_group name="HasBackpack">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500,750"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+		</entity_class> 
+
+		<!-- NPC NZ Mai With PipeMG -->
+		<entity_class name="NZMaiPipeMG" extends="npcAdvancedPipeMGTemplate">
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="EntityType" value="Player"/>		
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,DRMid,Knife,BatWood,Axe,PipeMG,Ak47,XBow"/> <!-- Added cp , and mostly UMA2 for testing UMA2 -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="PhysicsBody" value="NZaMaiNPCRig"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="2000" />
+			<property name="Names" value="NZMaiPipeMGs" />
+			<property name="PickUpItem" value="NZMaiPickUpNPC" />
+			<property name="Mesh" value="#@modfolder:Resources/1.0BetaNZMaiNPC.unity3d?7DayzMaiNZ"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>  <!-- Was false , will test true -->
+			<property name="HasRagdoll" value="true"/>  <!-- Was false , will test true -->
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Players"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<!--<property name="SoundDeath" value="HarleyDie"/> Adding Custom Voice , Not Adding One -->
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/> 
+			<property name="SleeperInstantAwake" value="true" /> <!-- Added Text -->
+			<property name="AvatarController" value="AvatarZombieController"/> <!-- Added Text -->
+			<property name="MaxViewAngle" value="360"/>		<!-- Added Text -->
+			<property name="SightRange" value="50"/>	<!-- Added Text -->
+			<property name="MaxTurnSpeed" value="359"/>		<!-- Added Text -->
+			<property name="SwimSpeed" value="1"/>	 <!-- Added Text -->
+			<property name="SwimStrokeRate" value="1,1.5"/>		 <!-- Added Text -->
+			<property name="CanClimbLadders" value="true"/>		 <!-- Added Text -->
+			<property name="JumpMaxDistance" value="2.8, 3.9"/> 	<!-- Added Text -->		
+			<property name="WalkType" value="7"/>
+			
+			<effect_group name="HasBackpack">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500,750"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+		</entity_class>
+
+		<!-- NPC NZ Mai With XBow -->
+		<entity_class name="NZMaiXBow" extends="npcAdvancedXBowTemplate">
+			<property name="Class" value="EntityAliveSDX, SCore" /> 
+			<property name="EntityType" value="Player"/>		
+			<property name="UserSpawnType" value="Menu"/> 
+ 			<property name="Tags" value="entity,female,npc,walker,melee,DRMid,Knife,BatWood,Axe,PipeMG,Ak47,XBow"/> <!-- Added cp , and mostly UMA2 for testing UMA2 -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="PhysicsBody" value="NZaMaiNPCRig"/>
+			<property name="LookAtAngle" value="0"/> 
+			<property name="HireCurrency" value="casinoCoin" />
+			<property name="HireCost" value="2500" />
+			<property name="Names" value="NZMaiXBows" />
+			<property name="PickUpItem" value="NZMaiPickUpNPC" />
+			<property name="Mesh" value="#@modfolder:Resources/1.0BetaNZMaiNPC.unity3d?7DayzMaiNZ"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>  <!-- Was false , will test true -->
+			<property name="HasRagdoll" value="true"/>  <!-- Was false , will test true -->
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Players"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<!--<property name="SoundDeath" value="HarleyDie"/> Adding Custom Voice , Not Adding One -->
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/> 
+			<property name="SleeperInstantAwake" value="true" /> <!-- Added Text -->
+			<property name="AvatarController" value="AvatarZombieController"/> <!-- Added Text -->
+			<property name="MaxViewAngle" value="360"/>		<!-- Added Text -->
+			<property name="SightRange" value="50"/>	<!-- Added Text -->
+			<property name="MaxTurnSpeed" value="359"/>		<!-- Added Text -->
+			<property name="SwimSpeed" value="1"/>	 <!-- Added Text -->
+			<property name="SwimStrokeRate" value="1,1.5"/>		 <!-- Added Text -->
+			<property name="CanClimbLadders" value="true"/>		 <!-- Added Text -->
+			<property name="JumpMaxDistance" value="2.8, 3.9"/> 	<!-- Added Text -->		
+			<property name="WalkType" value="7"/>
+			
+			<effect_group name="HasBackpack">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="HasBackpack"/>		
+			</effect_group>	
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500,750"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+			</effect_group>
+		</entity_class>
+
+    </append>			
+	
+</configs>
